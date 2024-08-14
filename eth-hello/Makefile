@@ -1,5 +1,6 @@
 #
-# various Makefile targets useful for hardhat
+# Makefile for Greeter/HelloWorld
+#   including installing a node project and the hardhat package
 #
 # https://hardhat.org/hardhat-runner/docs/getting-started
 #
@@ -15,6 +16,21 @@ NETWORK= localhost
 IGNITION_MODULE= none
 TEST_SCRIPT= greeter-test.js
 DEPLOY_SCRIPT= greeter-deploy.js
+
+all:
+	@echo "\t1) make init"
+	@echo "\t\ta) npm init will ask package information"
+	@echo "\t\tb) hardhat init chose Create an empty hardhat.config.js"
+	@echo "\t\tc) add addto-hardhat.config.js to hardhat.config.js"
+	@echo "\t\td) https://hardhat.org/hardhat-runner/docs/getting-started#quick-start"
+	@echo "\t2) make compile"
+	@echo "\t3) run the localhost network"
+	@echo "\t\ta) open an new console window"
+	@echo "\t\tb) make node"
+	@echo "\t4) deploy and test"
+	@echo "\t\ta) make deploy"
+	@echo "\t\tb) copy the contract address into contracts/test-greeter.js" 
+	@echo "\t\tc) make test"
 
 test:
 	npx hardhat run --network ${NETWORK} scripts/${TEST_SCRIPT}
@@ -43,8 +59,6 @@ init:
 	echo "require(\"@nomicfoundation/hardhat-ethers\");" >> addto-hardhat.config.js
 	echo "require(\"@nomicfoundation/hardhat-toolbox\");" >> addto-hardhat.config.js
 	echo "require(\"@nomicfoundation/hardhat-ignition-ethers\");" >> addto-hardhat.config.js
-	@echo "Add the lines in addto-hardhat.config.js to hardhat.config.js"
-	@echo "see https://hardhat.org/hardhat-runner/docs/getting-started#quick-start"
 
 
 set-config:
