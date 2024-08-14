@@ -2,6 +2,8 @@
 # various Makefile targets useful for hardhat
 #
 # https://hardhat.org/hardhat-runner/docs/getting-started
+# https://docs.openzeppelin.com/learn/
+# https://solidity-by-example.org
 #
 # author: bjr
 # last-update:
@@ -23,7 +25,6 @@ ignition:
 
 compile:
 	npx hardhat compile
-	@echo "You might need to make deploy"
 
 node:
 	npx hardhat node 
@@ -31,7 +32,7 @@ node:
 init:
 	npm init
 	npm install --save-dev hardhat
-	npm hardhat init
+	npx hardhat init
 	npm install --save-dev @nomicfoundation/hardhat-toolbox
 	npm install --save-dev @nomicfoundation/hardhat-ethers ethers
 	npm install --save-dev @nomicfoundation/hardhat-ignition-ethers

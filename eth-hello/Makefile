@@ -3,6 +3,8 @@
 #   including installing a node project and the hardhat package
 #
 # https://hardhat.org/hardhat-runner/docs/getting-started
+# https://docs.openzeppelin.com/learn/
+# https://solidity-by-example.org
 #
 # author: bjr
 # last-update:
