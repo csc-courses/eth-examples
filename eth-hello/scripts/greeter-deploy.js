@@ -5,10 +5,10 @@
 
 async function main () {
 
-  const Greeter  = await ethers.getContractFactory('Greeter');
-  const greeter = await greeter.deploy();
+  const Greeter = await ethers.getContractFactory('Greeter');
+  const greeter = await Greeter.deploy();
   await greeter.waitForDeployment();
-  console.log('Greeter deployed to:', await greeer.getAddress());
+  console.log('Greeter deployed to:', await greeter.getAddress());
 }
 
 main()
