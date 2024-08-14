@@ -33,8 +33,8 @@ node:
 	npx hardhat node 
 
 init:
-	echo npm init
-	echo npm install --save-dev hardhat
+	npm init
+	npm install --save-dev hardhat
 	npx hardhat init
 	npm install --save-dev @nomicfoundation/hardhat-toolbox
 	npm install --save-dev @nomicfoundation/hardhat-ethers ethers
@@ -43,6 +43,9 @@ init:
 	echo "require(\"@nomicfoundation/hardhat-ethers\");" >> addto-hardhat.config.js
 	echo "require(\"@nomicfoundation/hardhat-toolbox\");" >> addto-hardhat.config.js
 	echo "require(\"@nomicfoundation/hardhat-ignition-ethers\");" >> addto-hardhat.config.js
+	@echo "Add the lines in addto-hardhat.config.js to hardhat.config.js"
+	@echo "see https://hardhat.org/hardhat-runner/docs/getting-started#quick-start"
+
 
 set-config:
 	echo "this will prompt for the Infura Key and your wallet private key"
