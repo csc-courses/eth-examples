@@ -4,14 +4,14 @@
 //     14 aug 2024
 
 // file out this value from the output of the deploy script
-const CONTRACT_ADDRESS = "0xd753c12650c280383Ce873Cc3a898F6f53973d16";
+const CONTRACT_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3"
 
 async function main () {
   const deployedContractAddress = CONTRACT_ADDRESS;
   const HelloWorld = await ethers.getContractFactory('HelloWorld');
   const helloWorld = await HelloWorld.attach(deployedContractAddress);
 
-  var owner = helloWorld.getOwner();
+  var owner ; // = await helloWorld.getOwner();
   var greeting = await helloWorld.getGreeting();
   console.log(`owner: ${owner}\ngreeting:${greeting}`);
   

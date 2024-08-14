@@ -13,8 +13,8 @@ NETWORK= sepolia
 NETWORK= localhost
 
 IGNITION_MODULE= none
-TEST_SCRIPT= hello-test.js
-DEPOLY_SCRIPT= hello-deploy.js
+TEST_SCRIPT= greeter-test.js
+DEPLOY_SCRIPT= greeter-deploy.js
 
 test:
 	npx hardhat run --network ${NETWORK} scripts/${TEST_SCRIPT}
@@ -33,9 +33,9 @@ node:
 	npx hardhat node 
 
 init:
-	npm init
-	npm install --save-dev hardhat
-	npm hardhat init
+	echo npm init
+	echo npm install --save-dev hardhat
+	npx hardhat init
 	npm install --save-dev @nomicfoundation/hardhat-toolbox
 	npm install --save-dev @nomicfoundation/hardhat-ethers ethers
 	npm install --save-dev @nomicfoundation/hardhat-ignition-ethers
